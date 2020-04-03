@@ -2,6 +2,7 @@
 // Created by Arana Fireheart on 1/30/20.
 //
 
+#include <ctime>        // For those builds that don't include this in std.
 #include "die.h"
 
 Die :: Die(int openingNumberOfSides, int openingStartingValue, int openingIncrement, std::string openingColor, std::string openingName) {
@@ -11,7 +12,7 @@ Die :: Die(int openingNumberOfSides, int openingStartingValue, int openingIncrem
     color = openingColor;
     name = openingName;
     value = 6;
-    srand((unsigned int)time(NULL));    // Seed the random number generator.
+    srand((unsigned int)time(nullptr));    // Seed the random number generator.
 }
 std::string Die::stringRep() {
     char buffer[100];

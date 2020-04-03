@@ -1,4 +1,5 @@
 #include <iostream>
+#include <tuple>        // Required for those libraries that don't have this in std
 #include "craps.h"
 
 float processBet(float currentBank);
@@ -52,7 +53,7 @@ float processBet(float currentBank) {
                 betAccepted = false;
             }
         } else
-            return 0.0;
+            betAccepted = false;
     }
 };
 
